@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="cube.css" rel="stylesheet">
+    <title>Restaurant Types and timings</title>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+  }
+  .container-fluid{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #FFF;
+  }
+  /* ============= Animation background ========= */
+
+  .cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #e9026e;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 12s ease-in forwards infinite;
+  }
+  .cube:nth-child(2n) {
+    border-color: rgb(156, 6, 243) ;
+  }
+  .cube:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+  }
+  .cube:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+  }
+  .cube:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+  }
+  .cube:nth-child(5) {
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+  }
+  .cube:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
+  /* ================= Header ============ */
+  header{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width:100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* navbar */
+  nav{
+    color: #FFF;
+    float: right;
+    margin:30px 90px;
+  }
+  nav ul{
+    list-style: none;
+  }
+  nav ul li {
+    float: left;
+    transition: .3s;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: #EFEEF5;
+    transition: .5;
+    font-size: 15px;
+    margin-left:16px;
+  }
+  nav ul li:hover a{
+    text-decoration: none;
+    color: #591BC5;;
+  }
+  nav ul li:hover{
+    height: 45px;
+    padding-top: 30px;
+    margin-top: -30px;
+   background: #EFEEF5;
+    text-decoration: none;
+    transform: skew(15deg);
+  }
+  /* Logo */
+  .logo{
+    width: 35px;
+    height: 35px;
+    background: #EFEEF5;
+    margin: 40px 63px;
+    float: left;
+    transform: rotate(-30deg);
+  }
+  .logo span{
+    color: #591BC5;
+    font-size: 2em;
+    line-height: 1.4;
+    padding-left: 5px;
+    font-weight: bold;
+  }
+  /* Header content & title & button*/
+  .header-content{
+    margin-top:25%;
+    text-align: center;
+    color:  #EFEEF5;
+  }
+  .header-content h1{
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 1px;
+  }
+  .header-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 20px auto;
+  }
+  .header-content button{
+    width: 140px;
+    margin:20px 10px;
+    color: #591BC5;
+    font-size: 17px;
+    border:1px solid #EFEEF5;
+    font-weight: 500;
+    background: #EFEEF5;
+    border-radius: 20px;
+    padding: 10px;
+    cursor:pointer;
+    transition: .3s;
+  }
+  .header-content button:hover{
+    border-radius: 0;
+  }
+  /* Animate Background*/
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+ 
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+   <div class="cube"></div>
+
+
+
+   
+
+    <div class="container justify-content-center align-items-center border">
+    <h1 class="text-center">Kitchen Type and Timings</h1>
+    <div class="type border">
+    <h4>Establishment Type</h4>
+    <h6>Select most relevant category for your restaurant type</h6>
+    <form action="form2.php" method ="post" enctype="multipart/form-data">
+        
+        <div class="form-check">
+            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="Both, delivery and dine-in available">Both, delivery and dine-in available
+            <br><p style="color:grey;">Select this option when you have a place for customers to dine-in and also want to activate online ordering for your restaurant</p>
+            <label class="form-check-label" for="radio1"></label>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="Dine-in only">Dine-in only
+            <br><p style="color:grey;">Select when you don’t want to register for online ordering</p>
+            <label class="form-check-label" for="radio2"></label>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" name="optradio" value="Delivery only" disabled>Delivery only
+            <br><p style="color:grey;">Select when you don’t have a facility for customers to dine-in (like delivery kitchens)</p>
+            <label class="form-check-label"></label>
+          </div>
+
+<h4>Type of cuisines</h4>
+<h6>Select options which best describe food your serve</h6>
+<table class="table">
+  <tr>
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option1" value="Cakes">
+      <label class="form-check-label">Cakes</label>
+    </div></td>
+
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option2" value="Burger" >
+      <label class="form-check-label">burger</label>
+    </div></td>
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option3" value="Pizza">
+      <label class="form-check-label">Pizza</label>
+    </div></td>
+  </tr>
+  
+
+  <tr>
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option4" value="Coffee and Tea">
+      <label class="form-check-label">Coffee and Tea</label>
+    </div></td>
+
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option5" value="Drinks" >
+      <label class="form-check-label">Drinks</label>
+    </div></td>
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option6" value="Desserts">
+      <label class="form-check-label">Desserts</label>
+    </div></td>
+  </tr>
+
+
+
+
+
+
+
+  <tr>
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option7" value="Shawarma">
+      <label class="form-check-label">Shawarma</label>
+    </div></td>
+
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option8" value="Milkshakes">
+      <label class="form-check-label">Milkshakes</label>
+    </div></td>
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option9" value="Fried Rice">
+      <label class="form-check-label">Fried Rice</label>
+    </div></td>
+  </tr>
+  <tr>
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option10" value="Chicken">
+      <label class="form-check-label">Chicken</label>
+    </div></td>
+
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option11" value="Mutton" >
+      <label class="form-check-label">Mutton</label>
+    </div></td>
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option12" value="Fishes">
+      <label class="form-check-label">Fishes</label>
+    </div></td>
+  </tr>
+  <tr>
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option13" value="Ice cream">
+      <label class="form-check-label">Ice cream</label>
+    </div></td>
+
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option14" value="Briyani">
+      <label class="form-check-label">Briyani</label>
+    </div></td>
+    <td><div class="form-check">
+      <input class="form-check-input" type="checkbox" id="check1" name="option15" value="Meals">
+      <label class="form-check-label">Meals</label>
+    </div></td>
+  </tr>
+<table>
+</div>
+
+
+
+<div class="timings border">
+  <h4>Cloud kitchen operational hours</h4>
+  <h6>Mark your kitchen opening and closing hours</h6>
+<div class="row">
+  <div class="col-sm-4">
+    Opens at
+  </div>
+
+  <div class="col-sm-2">
+    Closes at
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-2">
+    <input type="open" class="form-control" id="open" placeholder="9.00am" name="open">
+  </div>
+  <div class="col-sm-2">
+    <p>to</p>
+  </div>
+
+  <div class="col-sm-2">
+    <input type="close" class="form-control" id="close" placeholder="10.00pm" name="close">
+  </div>
+</div>
+
+
+<h5>Mark open days</h5>
+<p>Don’t forget to uncheck your off-day</p>
+<table class="table">
+  <tr>
+    <td>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="check1" name="opt1" value="Monday" >
+        <label class="form-check-label">Monday</label>
+      </div>
+    </td>
+    <td>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="check1" name="opt2" value="Friday" >
+        <label class="form-check-label">Friday</label>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="check1" name="opt3" value="Tuesday" >
+        <label class="form-check-label">Tuesday</label>
+      </div>
+    </td>
+    <td>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="check1" name="opt4" value="Saturday" >
+        <label class="form-check-label">Saturday</label>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="check1" name="opt5" value="Wednesday" >
+        <label class="form-check-label">Wednesday</label>
+      </div>
+    </td>
+    <td>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="check1" name="opt6" value="Sunday" >
+        <label class="form-check-label">Sunday</label>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="check1" name="opt7" value="Thursday" >
+        <label class="form-check-label">Thursday</label>
+      </div>
+    </td>
+   
+  </tr>
+</table>
+
+
+
+
+</div>
+
+<button type="submit" class="btn btn-danger d-flex align-items-center justify-content-center" name="upload">Submit</button>
+
+
+
+
+
+      </form>
+    </div>
+</body>
+</html>

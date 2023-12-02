@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="cube.css" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<style>
+    #h1:hover{
+    background-color:blue;
+}
+#img{
+    box-shadow: inset 0 0 10px #f81212;
+    backdrop-filter:blur(14px);
+}
+#act:active{
+    border:1px dashed blueviolet;
+}
+
+
+
+
+
+
+
+
+.title {
+  font-family: "Cairo";
+  text-align: center;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  
+  
+  letter-spacing: 1px;
+  line-height:2
+}
+
+#slide {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+
+
+}
+
+
+
+
+
+.border{
+  padding: 5px;
+    background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #88d8b0 34%);
+  background-size: 400% 400%;
+  height: 400px;
+  background-position: 25% 50%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+}
+.inner-cutout{
+  padding: 10px 0;
+  display: block;
+  background-color:#ff6f69;/*#ff6f69*/
+    
+  margin: 2%;
+  padding-bottom: 40px;
+  height: 300px;
+  background: radial-gradient(#ff6f69, #ff8b87);
+   background-size: 300%;
+  background-position:50% 50%;
+
+}
+.knockout {
+  
+  vertical-align: middle;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size:50pt;
+  color: blue;
+  color: #fff;
+  background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #88d8b0 34%);
+  background-size: 400%;
+   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.knockout{
+    animation: Gradient 5s ease infinite;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 30% 50%
+  }
+  50% {
+    background-position: 25% 50%
+  }
+  100% {
+    background-position: 30% 50%
+  }
+  
+}
+
+
+
+.main{
+  width: 500px;
+  height: 800px;
+  margin-left: 40%;
+  margin-right:40%;
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="background">
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+   <div class="cube"></div>
+<div >
+    <div class="title">
+        <h1 class="text-center" id="slide">CLOUD KITCHEN</h1>
+    </div>
+
+
+
+
+
+    <div class="justify-content-center d-flex flex-row">
+
+        <img src="one.png" style="width:20px;height:20px;"  id="h1">
+    
+    
+        <strong>
+            <a href="form1.html" id="act" style="color:#cfe600;"> Restaurant Information</a>
+         </strong>
+        
+    </div>
+    <p class="text-center" style="color:white;">
+        Restaurant name,address,Contact number,Owner details
+       </p>
+    
+    
+    <div class="justify-content-center d-flex flex-row ">
+    
+        <img src="number-two.png" style="width:20px;height:20px;" id="h1">
+        <strong>
+            <a href="form2.html" id="act" style="color:#cfe600;">Restaurant Types and Timings</a>
+         </strong>
+        
+    </div>
+    
+     
+
+
+        
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="drinks.png" style="height:370px;width:400px;">
+            </div>
+            <div class="col-sm-8 mt-5">
+                <div class="main">
+                    <div class = "border">
+                      <div class = "inner-cutout"> 
+                        <h1 class="knockout">Register <br> Soon...</h1>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+
+
+
+    
+
+
+
+</div>
+
+
+
+
+
+   
+</body>
+</html>

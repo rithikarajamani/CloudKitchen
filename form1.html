@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant information</title>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+  input, textarea {
+  /* -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out; */
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+
+
+  box-shadow: inset 0 0 10px #fc3706;
+}
+ 
+input:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+</style>
+
+<style>
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+  }
+  .container-fluid{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #FFF;
+  }
+  /* ============= Animation background ========= */
+
+  .cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #e9026e;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 12s ease-in forwards infinite;
+  }
+  .cube:nth-child(2n) {
+    border-color: rgb(156, 6, 243) ;
+  }
+  .cube:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+  }
+  .cube:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+  }
+  .cube:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+  }
+  .cube:nth-child(5) {
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+  }
+  .cube:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
+  /* ================= Header ============ */
+  header{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width:100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* navbar */
+  nav{
+    color: #FFF;
+    float: right;
+    margin:30px 90px;
+  }
+  nav ul{
+    list-style: none;
+  }
+  nav ul li {
+    float: left;
+    transition: .3s;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: #EFEEF5;
+    transition: .5;
+    font-size: 15px;
+    margin-left:16px;
+  }
+  nav ul li:hover a{
+    text-decoration: none;
+    color: #591BC5;;
+  }
+  nav ul li:hover{
+    height: 45px;
+    padding-top: 30px;
+    margin-top: -30px;
+   background: #EFEEF5;
+    text-decoration: none;
+    transform: skew(15deg);
+  }
+  /* Logo */
+  .logo{
+    width: 35px;
+    height: 35px;
+    background: #EFEEF5;
+    margin: 40px 63px;
+    float: left;
+    transform: rotate(-30deg);
+  }
+  .logo span{
+    color: #591BC5;
+    font-size: 2em;
+    line-height: 1.4;
+    padding-left: 5px;
+    font-weight: bold;
+  }
+  /* Header content & title & button*/
+  .header-content{
+    margin-top:25%;
+    text-align: center;
+    color:  #EFEEF5;
+  }
+  .header-content h1{
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 1px;
+  }
+  .header-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 20px auto;
+  }
+  .header-content button{
+    width: 140px;
+    margin:20px 10px;
+    color: #591BC5;
+    font-size: 17px;
+    border:1px solid #EFEEF5;
+    font-weight: 500;
+    background: #EFEEF5;
+    border-radius: 20px;
+    padding: 10px;
+    cursor:pointer;
+    transition: .3s;
+  }
+  .header-content button:hover{
+    border-radius: 0;
+  }
+  /* Animate Background*/
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+</style>
+
+
+</head>
+<body>
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+ <div class="cube"></div>
+
+
+
+  <div class="container border" >
+
+ 
+    <h2 class="text-center">Restaurant Details</h2>
+    <div class="container mt-3">
+    
+           
+       
+        <form action="form1.php" method ="post" enctype="multipart/form-data">
+          <div class="mb-3 mt-3">
+            <label for="name">Restaurant name:</label>
+            <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+          </div>
+          <div class="form-group">
+            <label for="address">Restaurant Address:</label>
+            <textarea class="form-control" rows="5" id="address" name="address"></textarea>
+          </div>
+
+
+<br>
+
+        <div  class="address border ">
+<h4>Restaurant Address Details:</h4>
+
+
+<div class="mb-3 mt-3">
+  <label for="area">Area:</label>
+  <input type="text" class="form-control" id="areaplace" placeholder="Enter area" name="id">
+</div>
+<div class="mb-3 mt-3">
+  <label for="state">State:</label>
+  <input type="state" class="form-control" id="state" placeholder="Enter state" name="state">
+</div>
+
+</div>
+<br>
+
+<div class="contact border">
+  <h4>Contact</h4>
+  <div class="mb-3 mt-3">
+    <label for="mobile">Please enter Restaurant mobile number:</label>
+    <input type="mobile" class="form-control" id="mobile" placeholder="Mobile number at Restaurant" name="number">
+  </div>
+</div>
+<br>
+<div class="owner border" style="border-radius:10px;border-color: #f5a106;">
+  <h4>Restaurant owner details</h4>
+  <div class="mb-3 mt-3">
+    <label for="urname">Name:</label>
+    <input type="urname" class="form-control" id="urname" placeholder="Enter your name" name="ownername">
+  </div>
+  <div class="mb-3 mt-3">
+    <label for="urmobile">Please enter your mobile number:</label>
+    <input type="urmobile" class="form-control" id="urmobile" placeholder="Mobile number of owner" name="ownernumber">
+  </div>
+  <div class="mb-3 mt-3">
+    <label for="email">Please enter your email:</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
+  </div>
+</div>
+
+
+<br>
+
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="remember"> Remember me
+            </label>
+          </div>
+          <div>
+            <h1 class="text-center">Upload images</h1>
+              <div class="container justify-content-center align-items-center border">
+               
+                  <h4>Menu images</h4>
+                  <p style="color: grey;">Your menu will be directly visible to customers on Cloud Kitchen</p>
+          <br>
+          <div class="container " style="border:1px dotted blue;width:60%;color: blue;">
+          
+          
+                  <p class="text-center" style="color:black;">Drag and drop to upload or <u>browse</u></p><br>
+                  <div class="container text-center">
+                    <input type="file"   name="image" placeholder="" required ><br><br>
+                     
+                  </div>
+                 
+          </div>
+          <button type="submit" class="btn btn-danger d-flex align-items-center justify-content-center" name="upload">Next</button>
+
+        </form>
+
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
+
+
